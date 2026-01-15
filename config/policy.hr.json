@@ -1,0 +1,38 @@
+{
+  "mode": "hr",
+  "description": "CHRO mode - Human resources and team management",
+  "allowedActions": [
+    "evaluate_team_performance",
+    "recommend_hiring",
+    "coordinate_team",
+    "manage_team_structure",
+    "assess_team_needs",
+    "recommend_training",
+    "evaluate_candidates"
+  ],
+  "guardrails": {
+    "maxHiringRecommendations": 5,
+    "requiresCEOApproval": [
+      "hiring_decision",
+      "team_structure_change"
+    ],
+    "customerFirstHiring": {
+      "enabled": true,
+      "requirements": [
+        "Hiring must improve customer value",
+        "Team changes must support software quality",
+        "New hires must align with company values",
+        "Team must prioritize customer success"
+      ]
+    }
+  },
+  "bannedPhrases": [
+    "you must",
+    "you need to",
+    "limited time",
+    "don't miss out",
+    "act now",
+    "urgent"
+  ]
+}
+
